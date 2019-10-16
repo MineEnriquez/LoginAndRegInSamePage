@@ -4,27 +4,31 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using LoginAndReg.Models;
+using LoginAndRegSimple.Models;
 using Microsoft.EntityFrameworkCore;    //MMGC: For entity handling
 using Microsoft.AspNetCore.Identity;    //MMGC:  For password hashing.
 using Microsoft.AspNetCore.Http;
 
-namespace LoginAndReg.Controllers
+namespace LoginAndRegSimple.Controllers
 {
     public class HomeController : Controller
     {
-        private LoginAndRegContext dbContext;
-        public HomeController(LoginAndRegContext context) { dbContext = context; }
+        private LoginAndRegSimpleContext dbContext;
+        public HomeController(LoginAndRegSimpleContext context) { dbContext = context; }
 
+        [Route("/")]
+        [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            return View("Index");
         }
 
         //-----------------
         [HttpPost("Register")]
-        public IActionResult Register(User _user)
+        // public IActionResult Register(User _user)
+        public IActionResult Register(ModelForLoginPage information)
         {
+            User _user = information.Register;
             // Check initial ModelState
             if (ModelState.IsValid)
             {
@@ -33,7 +37,7 @@ namespace LoginAndReg.Controllers
                 {
                     // Manually add a ModelState error to the Email field, with provided
                     // error message
-                    ModelState.AddModelError("Email", "Email already in use!");
+                    ModelState.AddModelError("Register.Email", "Email already in use!");
                     return View("Index");
                     // You may consider returning to the View at this point
                 }
@@ -43,8 +47,9 @@ namespace LoginAndReg.Controllers
 
                 dbContext.Add(_user);
                 dbContext.SaveChanges();
-
-                return Redirect("Login");
+                ViewBag.Email = _user.Email;
+                return View("Index");  //if registration is successfull, what? return to the first page and wait for the user to login?
+                //or maybe go to the success page with the user already registered and logged in?
             }
             else
             {
@@ -62,8 +67,10 @@ namespace LoginAndReg.Controllers
 
         [Route("Login")]
         [HttpPost]
-        public IActionResult Login(LoginUser userSubmission)
+        // public IActionResult Login(LoginUser userSubmission)
+        public IActionResult Login(ModelForLoginPage information)
         {
+            LoginUser userSubmission = information.Login;
             HttpContext.Session.Clear();
             if (ModelState.IsValid)
             {

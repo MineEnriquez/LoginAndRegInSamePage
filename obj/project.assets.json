@@ -12160,11 +12160,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Git\\BOOTCAMP\\CodingDojo\\Bootcamp_secondstack\\EFc\\LoginAndReg\\LoginAndReg.csproj",
-      "projectName": "LoginAndReg",
-      "projectPath": "C:\\Git\\BOOTCAMP\\CodingDojo\\Bootcamp_secondstack\\EFc\\LoginAndReg\\LoginAndReg.csproj",
+      "projectUniqueName": "C:\\Git\\BOOTCAMP\\CodingDojo\\Bootcamp_secondstack\\EFc\\LoginAndRegInSamePage\\LoginAndRegSimple.csproj",
+      "projectName": "LoginAndRegSimple",
+      "projectPath": "C:\\Git\\BOOTCAMP\\CodingDojo\\Bootcamp_secondstack\\EFc\\LoginAndRegInSamePage\\LoginAndRegSimple.csproj",
       "packagesPath": "C:\\Users\\minee\\.nuget\\packages\\",
-      "outputPath": "C:\\Git\\BOOTCAMP\\CodingDojo\\Bootcamp_secondstack\\EFc\\LoginAndReg\\obj\\",
+      "outputPath": "C:\\Git\\BOOTCAMP\\CodingDojo\\Bootcamp_secondstack\\EFc\\LoginAndRegInSamePage\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

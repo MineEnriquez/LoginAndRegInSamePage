@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Git\\BOOTCAMP\\CodingDojo\\Bootcamp_secondstack\\EFc\\LoginAndReg\\LoginAndReg.csproj",
+  "FilePath": "c:\\Git\\BOOTCAMP\\CodingDojo\\Bootcamp_secondstack\\EFc\\LoginAndRegInSamePage\\LoginAndRegSimple.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2958,7 +2958,7 @@
     ],
     "CSharpLanguageVersion": 800
   },
-  "RootNamespace": "LoginAndReg",
+  "RootNamespace": "LoginAndRegSimple",
   "Documents": [
     {
       "FilePath": "Views\\Shared\\Error.cshtml",

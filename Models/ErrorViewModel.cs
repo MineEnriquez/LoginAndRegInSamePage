@@ -1,6 +1,6 @@
 using System;
 
-namespace LoginAndReg.Models
+namespace LoginAndRegSimple.Models
 {
     public class ErrorViewModel
     {

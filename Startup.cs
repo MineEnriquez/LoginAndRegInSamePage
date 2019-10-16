@@ -9,9 +9,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using LoginAndReg.Models;
+using LoginAndRegSimple.Models;
 
-namespace LoginAndReg
+namespace LoginAndRegSimple
 {
     public class Startup
     {
@@ -25,8 +25,8 @@ namespace LoginAndReg
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string mySqlConnection = "server=localhost;userid=root;password=root;port=3306;database=loginandregdb;SslMode=None";
-            services.AddDbContext<LoginAndRegContext>(options => options.UseMySql(mySqlConnection));
+            string mySqlConnection = "server=localhost;userid=root;password=root;port=3306;database=LoginAndRegdb;SslMode=None";
+            services.AddDbContext<LoginAndRegSimpleContext>(options => options.UseMySql(mySqlConnection));
             services.AddSession();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

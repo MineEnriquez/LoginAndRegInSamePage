@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
-namespace LoginAndReg.Models
+namespace LoginAndRegSimple.Models
 {
-    public class LoginAndRegContext : DbContext
+    public class LoginAndRegSimpleContext : DbContext
     {
         // base() calls the parent class' constructor passing the "options" parameter along
-        public LoginAndRegContext(DbContextOptions options) : base(options) { 
+        public LoginAndRegSimpleContext(DbContextOptions options) : base(options) { 
 	                          
         }
         public DbSet<User> Users { get; set; }
