@@ -82,7 +82,7 @@ namespace LoginAndRegSimple.Controllers
                 {
                     // Add an error to ModelState and return to View!
                     ModelState.AddModelError("Email", "Invalid Email/Password");
-                    return View("Login");
+                    return View("Index");
                 }
 
                 // Initialize hasher object
@@ -98,7 +98,7 @@ namespace LoginAndRegSimple.Controllers
                     // Add an error to ModelState and return to View!
                     ModelState.AddModelError("Password", "Invalid Email/Password");
                     //Clean up the session's user Id:
-                    return View("Login");
+                    return View("Index");
 
                 }
 
@@ -110,7 +110,7 @@ namespace LoginAndRegSimple.Controllers
             else
             {
                 // Oh no!  We need to return a ViewResponse to preserve the ModelState, and the errors it now contains!
-                return View("Login");
+                return View("Index");
             }
         }
 
